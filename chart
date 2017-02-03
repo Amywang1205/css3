@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.pie {
+			  	width: 100px; 
+			  	height: 100px;
+			  	border-radius: 50%;
+			 	background: #e85b92;
+			 	color: skyblue;
+			 	background-image: linear-gradient(to right, transparent 50%, currentColor 0);
+			 	position: relative;
+			}	
+			.pie .bg{
+				position: absolute;
+				left: 50%;
+				top: 0;
+			 	height: 100%;
+			 	width: 50%;
+			 	transform-origin: left;
+			 	background-color: inherit;
+			 	border-radius: 0 100% 100% 0/50%;
+			  	transform: rotate(.0turn);
+			  	animation: spin 3s linear infinite, bg 6s step-end infinite;
+			}
+			@keyframes spin {
+			  to { transform: rotate(.5turn); }
+			}
+			@keyframes bg {
+			  50% { background: skyblue; }
+			}					
+		</style>
+	</head>
+	<body>
+		<div class="pie">
+			<div class="bg"></div>
+		</div>
+	</body>
+</html>
